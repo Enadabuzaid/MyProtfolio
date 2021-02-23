@@ -564,6 +564,10 @@ img{
 .about-section .tab-content{
 	flex: 0 0 100%;
 	max-width:100%;
+	display: none;
+}
+.about-section .tab-content.active{
+	display: block;
 }
 .about-section .skills{
 	padding: 0 0 40px;
@@ -607,7 +611,7 @@ img{
 	color: var(--text-black-600);
 	margin-top: -40px;
 }
-
+.about-section .education,
 .about-section .experience{
 	padding-bottom: 80px; 
 }
@@ -646,14 +650,31 @@ img{
 	border-radius: 5px;
 	position: relative;
 }
-
+.about-section .timeline .timeline-item-inner:before{
+	content: '';
+	position: absolute;
+	width: 30px;
+	height: 1px;
+	background-color: var(--skin-color);
+	top: 37px;
+	z-index: -1;
+}
+.about-section .timeline .timeline-item:nth-child(odd) .timeline-item-inner:before{
+	right: -30px;
+}
+.about-section .timeline .timeline-item:nth-child(even) .timeline-item-inner:before{
+	left:-30px;
+}
 .about-section .timeline .timeline-item-inner .icon{
 	height: 40px;
 	width: 40px;
+	background-color: var(--bg-blak-500);
 	text-align: center;
 	border: 1px solid var(--bg-black-100);
 	line-height: 40px;
 	border-radius: 50%;
+	font-size: 16px;
+	color: var(--skin-color);
 	position: absolute;
 	top: 18px;
 
@@ -665,4 +686,32 @@ img{
 
 .about-section .timeline .timeline-item:nth-child(even) .icon{
 	left: -70px;
+}
+
+.about-section .timeline .timeline-item-inner span{
+	font-weight: 500;
+	color: var(--skin-color);
+	display: block;
+	margin: 0 0 10px;
+	text-transform: capitalize;
+}
+.about-section .timeline .timeline-item-inner h3{
+	font-size: 20px;
+	color: var(--text-black-700);
+	font-weight: 600;
+	margin: 0 0 5px;
+	text-transform: capitalize;
+}
+.about-section .timeline .timeline-item-inner h4{
+	font-size: 16px;
+	font-style: italic;
+	color: var(--text-black-600);
+	margin: 0;
+	
+}
+.about-section .timeline .timeline-item-inner p{
+	font-size: 16px;
+	color: var(--text-black-600);
+	line-height: 26px;
+	margin: 15px 0 0;
 }
