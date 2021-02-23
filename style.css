@@ -461,7 +461,7 @@ img{
 
 /*------ about -----*/
 .about-section{
-	padding: 88px 0 80px;
+	padding: 80px 0 0px;
 	min-height: 100vh;
 }
 
@@ -559,4 +559,110 @@ img{
 
 .about-section .about-tabs .tab-item.active{
 	color: var(--skin-color);
+}
+
+.about-section .tab-content{
+	flex: 0 0 100%;
+	max-width:100%;
+}
+.about-section .skills{
+	padding: 0 0 40px;
+}
+
+.about-section .skills .skill-item{
+	flex: 0 0 50%;
+	max-width: 50%;
+	padding: 0 15px;
+	margin-bottom: 40px;
+}
+.about-section .skills .skill-item p{
+	font-size: 16px;
+	color: var(--text-black-600);
+	text-transform: capitalize;
+	margin: 0 0 10px;
+}
+
+.about-section .skills .skill-item .progress{
+	height: 20px;
+	border-radius: 10px;
+	position: relative;
+}
+
+.about-section .skills .skill-item .progress-bar{
+	background-color: var(--text-black-600);
+	height: 6px;
+	left: 7px;
+	top: 7px;
+	position: absolute;
+	border-radius: 10px;
+
+}
+
+.about-section .skills .skill-item .progress-bar span{
+	position: absolute;
+	right: 0;
+	top: 0;
+	font-size: 16px;
+	font-weight: 500;
+	color: var(--text-black-600);
+	margin-top: -40px;
+}
+
+.about-section .experience{
+	padding-bottom: 80px; 
+}
+
+.about-section .timeline{
+	flex: 0 0 100%;
+	max-width: 100%;
+	position: relative;
+}
+.about-section .timeline:before{
+	content: '';
+	width: 1px;
+	height: 100%;
+	left: 50%;
+	top: 0;
+	background-color: var(--bg-black-100);
+	position: absolute;
+}
+.about-section .timeline .timeline-item{
+	flex: 0 0 100%;
+	max-width: 100%;
+	padding: 0 15px;
+}
+
+.about-section .timeline .timeline-item:nth-child(odd){
+	padding-right: calc(50% + 50px);
+	text-align: right;
+}
+
+.about-section .timeline .timeline-item:nth-child(even){
+	padding-left: calc(50% + 50px);
+}
+
+.about-section .timeline .timeline-item-inner{
+	padding: 30px;
+	border-radius: 5px;
+	position: relative;
+}
+
+.about-section .timeline .timeline-item-inner .icon{
+	height: 40px;
+	width: 40px;
+	text-align: center;
+	border: 1px solid var(--bg-black-100);
+	line-height: 40px;
+	border-radius: 50%;
+	position: absolute;
+	top: 18px;
+
+}
+
+.about-section .timeline .timeline-item:nth-child(odd) .icon{
+	right: -70px;
+}
+
+.about-section .timeline .timeline-item:nth-child(even) .icon{
+	left: -70px;
 }
