@@ -1,6 +1,6 @@
 
 /*-----fonts ---------*/
-@import url('https://fonts.googleapis.com/css2?family=RocknRoll+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Reggae+One&display=swap');
 
 
 /*-----End fonts ---------*/
@@ -27,6 +27,7 @@ body{
 	line-height: 1.5;
 	overflow-x: hidden;
 	background-color: var(--bg-black-50);
+	
 }
 
 *:not(i){
@@ -800,3 +801,37 @@ img{
 	line-height: 26px;
 }
 
+/* proto */ 
+.protfolio-section{
+	padding: 80px 0 80px;
+	min-height: 100vh;
+}
+.protfolio-section .section-title{
+	margin-bottom: 40px;
+}
+.protfolio-section .protfolio-filter{
+	padding: 0 15px;
+	flex: 0 0 100%;
+	max-width: 100%;
+	text-align: center;
+}
+.protfolio-section .filter-item{
+	display: inline-block;
+	margin:0 5px 10px;
+	padding: 5px 10px;
+	border-radius: 30px;
+	cursor: pointer;
+	font-weight: 500;
+	color: var(--text-black-800);
+	text-transform: capitalize;
+	font-size: 16px;
+	transition: all 0.3s ease;
+}
+
+.protfolio-section .filter-item:hover:not(.active){
+	opacity: 0.6;
+}
+
+.protfolio-section .filter-item.active{
+	color: var(--skin-color);
+}
