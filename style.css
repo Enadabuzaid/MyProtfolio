@@ -835,3 +835,13 @@ img{
 .protfolio-section .filter-item.active{
 	color: var(--skin-color);
 }
+
+.protfolio-section .protfolio-items{
+	flex: 0 0 33.33%;
+	max-width: 33.33%;
+	padding:  15px;
+}
+
+.protfolio-section .protfolio-item-details{
+	display: none;
+}
