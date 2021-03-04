@@ -918,6 +918,17 @@ img{
 
 }
 
+.portfolio-popup .pp-details{
+	
+	max-width: 1350px;
+	width: 85%;
+	margin: auto;
+
+}
+
+.portfolio-popup .pp-details-inner{
+	padding: 60px 0;
+}
 .portfolio-popup .pp-main{
 	min-height:100vh ;
 	max-width: 1350px;
