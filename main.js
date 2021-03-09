@@ -56,6 +56,15 @@
 		}
 	})
 
+	portfolioItemContainer.addEventListener("click",(event)=>{
+		if (event.target.closest(".protfolio-item-inner")) {
+			const portfolioItem = event.target.closest(".portfolio-item-inner").parentElement;
+			itemIndex = Array.from(portfolioItem.parentElement.children).indexOf(portfolioItem);
+			secreenshots = portfolioItem[itemIndex].querySelector(".prtfolio-item-img img").getAttribute("data-screenshots");
+			console.log(screenshots);
+		}
+	})
+
 
 
 
