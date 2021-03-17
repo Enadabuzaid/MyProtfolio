@@ -43,11 +43,26 @@
 				navMenu.querySelector(".active").classList.add("outer-shadow","hover-in-shadow");
 				navMenu.querySelector(".active").classList.remove("active","inner-shadow");
 
-				event.target.classList.add("active","inner-shadow");
-				event.target.classList.remove("outer-shadow","hover-in-shadow");
 
-				hideNavMenu();
+				if (navMenu.classList.contains("open")) {
+					event.target.classList.add("active","inner-shadow");
+					event.target.classList.remove("outer-shadow","hover-in-shadow");
 
+					hideNavMenu();
+
+
+				}else{
+					let navItems = navMenu.querySelectorAll(".link-item");
+					navItems.forEach((item)=>{
+						if(hash === item.hash){
+							item.classList.add("active","inner-shadow");
+							event.target.classList.remove("outer-shadow","hover-in-shadow");
+
+						}
+					})
+					fadeOutEffect();
+				}	
+				window.location.hash = hash;
 			};
 		}
 	})
